@@ -1,0 +1,41 @@
+body {
+    /* 1순위 폰트 Dongle 2순위 폰트 Poppins */
+    /* 숫자 문구를 영문 폰트로 작업할 시에는 영문폰트만 지원하는 폰트로 작업해서 맨앞에 넣는다. */
+    /* 폰트는 무거워 웹사이트 화면이 뜰 때 글씨나 이미지 로딩이 느려질 수 있다. (구글 폰트는 가벼움) */
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.fontPoppins {
+    font-family: 'Dongle', serif;
+    font-size: 2rem;
+}
+
+.d-flex {
+    display: flex;
+}
+.d-none {
+    display: none;  /* 숨김 */
+}
+.jcc {
+    justify-content: center; /* 중앙에 정렬 */
+}
+.jcb {
+    justify-content: space-between; /* 양쪽 끝에 정렬*/
+}
+.jce {
+    justify-content: end; /* 오른쪽 끝에 정렬*/
+}
+.aic {
+    align-items: center;
+}
+
+.red {
+    background-color: red;
+}

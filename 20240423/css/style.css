@@ -1,0 +1,29 @@
+/* # 아이디는 스타일이 길어질 때, 자바스크립트와 작업이 되는 태그를 쓸 때 */
+
+#psh_hd {
+    border-bottom: 1px solid #41a900;
+    padding: 1rem;
+    background-color: #ecfd9fde;
+}
+.gnb {
+    /* font-size: 2em; em : 상위 태그 선에 따라 영향을 받음 */
+}
+.gnb li {
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+.util li {
+    margin-left: 0.4rem;
+    font-size: 0.6em;
+}
+li a {
+    color: #41a900;
+}
+
+.gnb li:hover a {
+    color: red;
+    border-top: 1px solid red;
+}
+.util li:hover a {
+    color: blue;
+}
