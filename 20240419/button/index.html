@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 태그</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <style>
+        body {
+            /*
+                display:flex; 엄마한테 적용
+                display:block; 자기자신한테 적용
+            */
+            display: flex;
+            height: 100vh;  /* 디바이스 기준 높이값 100% */
+            width: 100vw;  /* 디바이스 기준 너비값 100% */
+            align-items: center;  /* Y축 */
+            justify-content: center; /* X축 */
+        }
+        button {
+            background-color: transparent;
+            color: black;            
+            font-size: 2rem;
+            padding: 0.5rem 2rem;
+            border-radius: 100px;
+            border: 3px solid black; /* 두께 타입 색상 */
+            transition: 0.5s; /* 0.5초 애니메이션, 마우스 이벤트 왕복 애니메이션 */
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+            border-radius: 0;
+            /* transition: 0.5s; 마우스 올렸을 때만 애니메이션 */
+        }
+    </style>
+</head>
+<body>
+    <button>hover</button>
+</body>
+</html>
