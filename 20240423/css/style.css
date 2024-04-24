@@ -19,10 +19,13 @@
 li a {
     color: #41a900;
 }
+.gnb li a {
+    border-top: 1px solid transparent;
+}
 
 .gnb li:hover a {
     color: red;
-    border-top: 1px solid red;
+    border-top-color: red;
 }
 .util li:hover a {
     color: blue;
