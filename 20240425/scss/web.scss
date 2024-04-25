@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* { // 모든 태그에 스타일 적용
+    // reset 스타일
+    font-family: 'KCC-Hanbit';  // 폰트는 돋음, 바탕체가 로딩되는 동안에 먼저 나올 수 있기 때문에 제일 위에 배치
+    color: #1f1f1f; // 선생님 선호 > 무겁지 않아서
+    line-height: 2;
+    letter-spacing: -0.085em;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+// 공통 변수 
+
+
+// 공통 클래스
+.container {
+    max-width: 1280px; // 디바이스 화면이 1280px 보다 작으면 width 100%로 변경 됨 > 기본 width 100%    
+}
+.mx-auto {
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.bg-white {
+    background-color: white;
+}
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+
+// 커스터마이징
+#hd {
+    .container {
+        h1 {
+            a {}
+        }        
+        .util {
+            li {
+                a {}
+            }
+        }
+    }
+}
+#gnb {  // id는 유일성, 이정표 > 컴퓨터는 id를 먼저 읽고 클래스를 읽음
+    li {
+        a {
+            color: red;
+        }
+    }
+}
+
+#noticeSwiper {
+    .notice {    
+        li {
+            background-color: gray;
+            &:nth-child(2) { // & : 나 자신 / nth-child : 순서 
+                background-color: yellow;
+            }
+        }
+    }
+    > div { // > : 자손선택자 , 띄어쓰기는 후손선택자
+        width: 50%;
+    }
+}
