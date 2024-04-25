@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 위치</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+        header {
+            position: fixed;
+            top: 0; /* 브라우저 기준 상단 */
+            left: 0; /* 브라우저 기준 좌측 */
+            right: 0; /* 브라우저 기준 우측 */
+            background-color: pink;
+            height: 50px;
+            transition: 0.5s;
+        }
+        header:hover {
+            height: 100px;
+        }
+        aside {
+            background-color: black;
+            width: 50px;
+            height: 50px;
+            position: fixed; /* position먼저 작성 후 위치 작성 후 z-index*/
+            right: 20px;
+            bottom: 20px;
+            border-radius: 50% 50% 0 0;
+            transition: 0.5s;
+        }
+        aside:hover {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <aside></aside>
+</body>
+</html>
