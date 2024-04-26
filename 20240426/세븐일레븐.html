@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세븐일레븐 https://www.7-eleven.co.kr/</title>
+    
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+
+    <style>        
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            height: 500vh; /* vw, vh : 스크롤 포함 넓이*/
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        #quick {
+            position: fixed;
+            right: 0;
+            width: 80px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column; /*수직 기준*/
+            justify-content: center;
+        }
+        #quick li {
+            width: 200px;
+        }        
+        #quick li a {
+            display: block;
+            transition: 0.5s;
+            background-color: rgb(255, 90, 90);
+        }
+        #quick li:nth-child(2) a {
+            background-color: rgb(255, 200, 98);
+        }
+        #quick li:nth-child(3) a {
+            background-color: rgb(255, 255, 128);
+        }
+        #quick li:nth-child(4) a {
+            background-color: rgb(108, 255, 108);
+        }
+        #quick li:nth-child(5) a {
+            background-color: rgb(129, 129, 255);
+        }
+        #quick li:hover a {
+            margin-left: -90px;
+        }
+        #quick li i {
+            display: inline-block;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PTNKXZMSl_k?si=vJcFXp2a_YXuEXlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <aside id="quick">
+        <ul>
+            <li><a href="#"><i class="bi bi-github"></i><strong>깃</strong></a></li>
+            <li><a href="#"><i class="bi bi-youtube"></i><strong>유튜브</strong></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i><strong>인스타그램</strong></a></li>
+            <li><a href="#"><i class="bi bi-facebook"></i><strong>페이스북</strong></a></li>
+            <li><a href="#"><i class="bi bi-arrow-up"></i><strong>TOP</strong></a></li>
+        </ul>
+    </aside>
+</body>
+</html>

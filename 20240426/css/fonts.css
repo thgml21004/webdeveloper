@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('path/to/your/font.woff2') format('woff2'), /* 형식에 따라 .woff 또는 .woff2 선택 */
+         url('path/to/your/font.woff') format('woff');
+}
