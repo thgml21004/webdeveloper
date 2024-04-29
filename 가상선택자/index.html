@@ -77,23 +77,23 @@
         // document.head
         // 화면의 아이디가 animationAllbtn 객체를 클릭하면 경고창 떠라
         // 화면의 아이디가 animationAllbtn 객체를 명령받아라
-        document.getElementById("animationAllbtn").addEventListener("click", function() {
-            // alert("클릭했어");
-            document.getElementById("animationAllbtn").classList.add('show'); // 클래스명을 하나만 쓸 수 있다.
-            document.body.classList = "show action popup"; // 클래스명을 여러개 넣을 때, 더 많이 사용함, = : 저장하다
-        })
+        // document.getElementById("animationAllbtn").addEventListener("click", function() {
+        //     // alert("클릭했어");
+        //     document.getElementById("animationAllbtn").classList.add('show'); // 클래스명을 하나만 쓸 수 있다.
+        //     document.body.classList = "show action popup"; // 클래스명을 여러개 넣을 때, 더 많이 사용함, = : 저장하다
+        // })
 
 
         //-----------------------------------토글 기능 원리-----------------------------------
         let state = true;
 
         document.getElementById("animationAllbtn").addEventListener("click", function() {
-            if(status){
+            if(state){
                 document.getElementById("animationAllbtn").classList.add("show");
-                status =false;
+                state = false;
             }else{
                 document.getElementById("animationAllbtn").classList.remove("show");
-                status = true;
+                state = true;
             }
         })
 
@@ -114,17 +114,17 @@
         //-----------------------------------연습-----------------------------------
 
         //아이디가 gnb 객체를 클릭하면 경고창 '자바스크립트' 나오도록 한다 => 시나리오
-        document.getElementById('gnb').addEventListener('click', function(){
-            alert('자바스크립트')
-        })
+        // document.getElementById('gnb').addEventListener('click', function(){
+        //     alert('자바스크립트')
+        // })
 
-        //아이디가 allMenu를 클릭하면
-        //아이디가 gnb에게 나타난다.
-        document.getElementById('allMenu').addEventListener('click', function(){
-            document.getElementById("gnb").style.display = "block"; // => 노란색이 아닌 명령어는 .을 쓰고 들어가서 명령어를 써야된다.
-            // 아이디가 close에게 배경색을 빨강으로 처리
-            document.getElementById("close").style.backgroundColor = "red";
-        })
+        // //아이디가 allMenu를 클릭하면
+        // //아이디가 gnb에게 나타난다.
+        // document.getElementById('allMenu').addEventListener('click', function(){
+        //     document.getElementById("gnb").style.display = "block"; // => 노란색이 아닌 명령어는 .을 쓰고 들어가서 명령어를 써야된다.
+        //     // 아이디가 close에게 배경색을 빨강으로 처리
+        //     document.getElementById("close").style.backgroundColor = "red";
+        // })
 
 
     </script>
