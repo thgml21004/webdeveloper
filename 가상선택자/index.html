@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position absolute / click 이벤트 / transform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    
+    <style>
+        #animationAllbtn {
+            position: absolute;
+            border: 0;
+            width: 3rem;
+            height: 1.5rem; /* 의미 없는 스타일*/
+            top: 50%;
+            left: 50%;
+            /* margin-left: -1.5rem; */ /* 1.5rem 넓이의 반절 */
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            background-color: yellow;
+        }
+        #animationAllbtn::before, #animationAllbtn::after { /*가상선택자, inline 태그 */
+            content: ""; /* 주요컨텐츠를 넣으면 안된다. 장애인분들에게 들리지 않음 */
+            display: block;
+            height: 3px;
+            background-color: black;
+
+        }
+        /* #animationAllbtn::before {
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: black;
+        } */
+        #animationAllbtn span {
+            display: block;
+            height: 3px;
+            background-color: black;
+            margin: 10px 0;
+        }
+        /* #animationAllbtn::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: black;
+        } */
+    </style>
+</head>
+<body>
+    <button id="animationAllbtn">
+        <span></span>
+    </button>
+</body>
+</html>
