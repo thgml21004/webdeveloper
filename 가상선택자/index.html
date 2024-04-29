@@ -42,6 +42,7 @@
             background-color: black;
             position: absolute;
             left: 0;
+            transition: 0.3s;
         }
         #animationAllbtn::after {
             bottom: 0;
@@ -56,6 +57,14 @@
         #animationAllbtn.show span {
             width: 0;
         }
+        #animationAllbtn.show::before {
+            transform: rotate(-45deg); /* deg : 도, -45도*/
+            top: 12px;
+        }
+        #animationAllbtn.show::after {
+            transform: rotate(45deg); /* 45도*/
+            top: 13px;
+        }
     </style>
 </head>
 <body>
@@ -68,11 +77,31 @@
         // document.head
         // 화면의 아이디가 animationAllbtn 객체를 클릭하면 경고창 떠라
         // 화면의 아이디가 animationAllbtn 객체를 명령받아라
-        document.getElementById("animationAllbtn").addEventListener("click", function() {    
+        document.getElementById("animationAllbtn").addEventListener("click", function() {
             // alert("클릭했어");
             document.getElementById("animationAllbtn").classList.add('show'); // 클래스명을 하나만 쓸 수 있다.
             document.body.classList = "show action popup"; // 클래스명을 여러개 넣을 때, 더 많이 사용함, = : 저장하다
         })
+
+
+        //-----------------------------------토글 기능 원리-----------------------------------
+        let state = true;
+
+        document.getElementById("animationAllbtn").addEventListener("click", function() {
+            if(status){
+                document.getElementById("animationAllbtn").classList.add("show");
+                status =false;
+            }else{
+                document.getElementById("animationAllbtn").classList.remove("show");
+                status = true;
+            }
+        })
+
+
+
+
+
+
 
         // 제이쿼리 명령어
         // document.getElementById("animationAllbtn").click(function() {
@@ -82,7 +111,7 @@
 
 
 
-        //-------------연습-------------
+        //-----------------------------------연습-----------------------------------
 
         //아이디가 gnb 객체를 클릭하면 경고창 '자바스크립트' 나오도록 한다 => 시나리오
         document.getElementById('gnb').addEventListener('click', function(){
@@ -96,11 +125,6 @@
             // 아이디가 close에게 배경색을 빨강으로 처리
             document.getElementById("close").style.backgroundColor = "red";
         })
-
-
-
-
-
 
 
     </script>
