@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position absolute/ click 이벤트 / transform </title>
+    <style>
+        #animationAllbtn{
+            position: absolute;
+            border: 0;
+            width: 2.8rem;
+            height: 1.5rem;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        #animationAllbtn:before{
+            top:0
+        }
+        #animationAllbtn:before,
+        #animationAllbtn:after
+        {
+            content: "";
+            display: block;
+            height:3px;
+            background-color: black;
+            position: absolute;
+            left:0;
+            width:100%;
+            transition: 0.5s;
+        }
+        #animationAllbtn:after{
+            bottom:0;
+        }
+        #animationAllbtn span{
+            display: block;
+            height:3px;
+            background-color: black;
+            width: 100%;
+            transition: 0.5s;
+        }
+        #animationAllbtn.show  span{
+            width:0;
+        }
+        #animationAllbtn.show:before{
+            transform: rotate(-45deg);
+            top:12px;
+        }
+        #animationAllbtn.show:after{
+            transform: rotate(45deg);
+            top:13px;
+        }
+    </style>
+</head>
+<body>
+    <button id="animationAllbtn" >
+        <span></span>
+    </button>
+    <script>
+        let status = true;
+            document.getElementById("animationAllbtn").addEventListener('click', function(){
+               if(status){
+                document.getElementById("animationAllbtn").classList.add("show");
+                status =false;
+               }else{
+                document.getElementById("animationAllbtn").classList.remove("show");
+                status = true;
+               }
+            })
+    </script>
+</body>
+</html>
