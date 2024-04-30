@@ -9,11 +9,36 @@
         .img-fluid{ /*부트스트랩 클래스명*/
             max-width: 100%;
         }
+        #mainBanner {
+            background-image: url(./img/bg.png);
+            height: 100vw; /* 화면 너비만큰 높이값을 줘서 정사각형을 만들겠다. */
+            max-height: 800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            transition: 0.5s;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        #mainBanner:hover {
+            /* background-size: auto 150%; */
+        }
+        @media (max-width: 991px) { /* 디바이스 991 이하일 때 */
+            h2 span {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="mainBanner">
-        <img src="./img/bg.png" class="img-fluid" alt="배경">
+        <!-- 백그라운드 이미지는 검색에 안잡힌다. -->
+        <!-- 이미지에 반응형 적용 -->
+        <!-- <img src="./img/bg.png" class="img-fluid" alt="배경"> -->
+        <h2>삼양홀딩스<span>에 오신것을 환영합니다.</span></h2>
     </div>
 </body>
 </html>
