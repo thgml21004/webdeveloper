@@ -1,0 +1,12 @@
+#hd {
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .nav-link {
+        color: green;
+        &.show {
+            background-color: green;
+            color: white;
+        }
+    }
+}
