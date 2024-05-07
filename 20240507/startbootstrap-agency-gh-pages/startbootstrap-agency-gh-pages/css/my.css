@@ -1,0 +1,7 @@
+#services .fa-stack svg path {
+    fill: rgb(44, 197, 243);
+}
+
+section#contact form#contactForm .form-group-textarea {
+    height: auto;
+}
