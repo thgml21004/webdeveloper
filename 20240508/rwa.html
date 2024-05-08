@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배율이 깨지면 안되는 반응형</title>
+    <style>
+        .wrapper.rwa {
+            position: relative;
+            height: 0;
+            padding-top: 56%;
+
+        }
+        .rwa iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper rwa">
+        <iframe width="1250" height="703" src="https://www.youtube.com/embed/gcuSI0E48R4" title="호기심 가득한 리틀 디스커버러의 OUTDOOR SUMMER!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="wrapper">
+        <iframe width="1250" height="703" src="https://www.youtube.com/embed/gcuSI0E48R4" title="호기심 가득한 리틀 디스커버러의 OUTDOOR SUMMER!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
