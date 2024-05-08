@@ -1,6 +1,20 @@
 /*변수 색상*/
 $mainColor : #ffebb7;
+$pointColorPink : #FF7682;
+$pointColorOrange : #FF9268;
+$subColorBlue : #B5E1F9;
+$fontColorBlack : #333333;
+
+// @mixin 믹스인
+@mixin badgeText {
+    font-family: 'IBM Plex Sans KR';
+    color: $fontColorBlack;
+    font-size: 18px;
+}
 
 #mainBanner {
     color: $mainColor;
+    span {
+        @include badgeText;
+    }
 }
