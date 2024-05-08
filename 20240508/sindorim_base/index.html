@@ -41,11 +41,50 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- 커스터마이징 css -->
+    <!-- 공통 스타일 -->
     <link rel="stylesheet" href="./css/common.min.css">
+
+    <!-- 커스텀 스타일 -->
+    <link rel="stylesheet" href="./css/psh.min.css">
 
 </head>
 <body>
+    <form name="reservation" method="get" action="데이터처리파일경로">
+        <div class="form-group">
+            <label class="form-label" for="name">성함:</label>
+            <input class="form-input" type="text" id="name" name="name" required> <!-- required : 필수 -->
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">연락처:</label>
+            <input class="form-input" type="text" name="hp[0]" placeholder="000" lang="3" required>
+            -
+            <input class="form-input" type="text" name="hp[1]" placeholder="0000" lang="4" required>
+            -
+            <input class="form-input" type="text" name="hp[2]" placeholder="0000" lang="4" required>
+        </div>
+
+        <div class="form-group">
+            <span class="form-label">성별:</span>
+            <input class="form-radio" type="radio" id="male" name="gender" value="m" required>
+            <label for="male">남성</label>            
+            <input class="form-radio" type="radio" id="female" name="gender" value="f" required>
+            <label for="female">여성</label>
+        </div>
+        
+        <div class="form-group">
+            <label class="form-label" for="email">이메일:</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <input class="form-checkbox" type="checkbox" id="privacy_policy" name="privacy_policy" required>
+            <label class="form-label" for="privacy_policy">개인정보정책에 동의합니다.</label>
+        </div>
+
+        <button class="form-submit" type="submit">예약하기</button>
+
+    </form>
   
 </body>
 </html>
