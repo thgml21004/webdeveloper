@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <!-- ul>li*5{다중리스트 처리하기$} -->
+    <ul>
+        <li>다중리스트 처리하기1</li>
+        <li>다중리스트 처리하기2</li>
+        <li>다중리스트 처리하기3</li>
+        <li>다중리스트 처리하기4</li>
+        <li>다중리스트 처리하기5</li>
+    </ul>
+
+    <script>
+        const menulist = ['네이버','다음','구글','']; // [] : 그룹화, 정렬, array
+        document.querySelectorAll("ul li").forEach(function(el, idx) {
+            // console.log("el",el,"idx",idx)
+            el.innerHTML = menulist[idx]
+        })
+    </script>
+</body>
+</html>
