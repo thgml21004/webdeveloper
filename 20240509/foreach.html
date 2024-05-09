@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- ul>li*5{다중리스트 처리하기$} -->
-    <ul>
+    <ul style="display: flex;">
         <li>다중리스트 처리하기1</li>
         <li>다중리스트 처리하기2</li>
         <li>다중리스트 처리하기3</li>
@@ -21,7 +21,10 @@
             // console.log("el",el,"idx",idx)
             el.innerHTML = menulist[idx]
             el.addEventListener('mouseenter', function() {
-                alert(idx);
+                el.style.color = "red";
+            })
+            el.addEventListener('mouseleave', function() {
+                el.style.color = "black";
             })
         })
     </script>
