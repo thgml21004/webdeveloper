@@ -16,10 +16,13 @@
     </ul>
 
     <script>
-        const menulist = ['네이버','다음','구글','']; // [] : 그룹화, 정렬, array
+        const menulist = ['html/css','ECMA5','jQuery','react','Figma']; // [] : 그룹화, 정렬, array
         document.querySelectorAll("ul li").forEach(function(el, idx) {
             // console.log("el",el,"idx",idx)
             el.innerHTML = menulist[idx]
+            el.addEventListener('mouseenter', function() {
+                alert(idx);
+            })
         })
     </script>
 </body>
