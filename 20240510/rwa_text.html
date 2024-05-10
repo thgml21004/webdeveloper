@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text Content</title>
+    <style>
+        /*
+        .pc {
+            display: none;
+        }
+
+         @media (min-width:620px) {  /* 620 이상일 때
+            .pc {
+                display: block;
+            }
+            .mobile {
+                display: none;
+            }
+        } */
+
+        .mobile {
+            display: none;
+        }
+
+        @media (max-width:619px) {  /* 619 이하일 때*/
+            .pc {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+        }
+
+        @media (max-width:620px) {
+            .br620 {
+                display: block;
+                line-height: 0 !important;
+                font-size: 0 !important;
+                color: transparent !important;
+            }
+        }
+        @media (max-width:420px) {
+            .br420 {
+                display: block;
+                line-height: 0 !important;
+                font-size: 0 !important;
+                color: transparent !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="first">
+        <span class="pc">'막다른 골목' 엔씨소프트, 키우고 줄이고 벌이고...'카드' 다 꺼냈다</span>
+        <span class="mobile">'막다른 골목' 엔씨소프트</span>
+    </p>
+    <p class="second">
+        <span>'막다른 골목' <span class="br420"></span>엔씨소프트, <span class="br620">키우고 줄이고 벌이고...</span>'카드' 다 꺼냈다</span>
+    </p>
+</body>
+</html>
