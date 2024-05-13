@@ -1,0 +1,28 @@
+#hd {
+  padding: 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+#hd li {
+  margin-left: 1rem;
+}
+#hd .gnb {
+  display: flex;
+  margin-right: auto;
+  margin-left: 1rem;
+}
+#hd .iconMenu {
+  display: flex;
+}
+#hd .iconMenu li span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+#hd .member {
+  display: flex;
+}

@@ -1,0 +1,52 @@
+$menumg : 1rem;
+
+#hd {
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    h1 {
+        a {
+            img {
+
+            }
+        }
+    }
+    li {        
+        margin-left: $menumg;
+    }
+    .gnb {
+        display: flex;
+        margin-right: auto;
+        margin-left: 1rem;
+        li {
+            a {
+
+            }
+        }
+    }
+    .iconMenu {      
+        display: flex;
+        li {
+            i {
+
+            }
+            span {
+                position: absolute;
+                width: 0;
+                height: 0;
+                display: block;
+                overflow: hidden;
+                opacity: 0;
+            }
+        }
+    }
+    .member {
+        display: flex;
+        li {
+            a {
+
+            }
+        }
+    }
+}
