@@ -1,0 +1,32 @@
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-gray {
+  color: #666;
+}
+
+.bg-gray {
+  background-color: #ccc;
+}
+
+.round50 {
+  border-radius: 50px;
+}
+
+.sr_only {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
