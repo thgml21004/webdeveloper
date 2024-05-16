@@ -6,17 +6,31 @@
     <title>에잇세컨즈 헤더 작업</title>
     <link href="//cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
-    <link rel="stylesheet" href="/css/header1.min.css">
+    <link rel="stylesheet" href="/20240513/css/header1.min.css">
 </head>
 <body>
     <header id="hd" class="px-5 py-3 fixed-top bg-white border-bottom d-flex justify-content-between align-items-center">
         <h1 class="mb-0"><a href="/">로고</a></h1>
         <ul class="gnb d-flex mb-0 ps-0 me-auto ms-3">
-            <li class="mx-3"><a href="">대메뉴1</a></li>
-            <li class="mx-3"><a href="">대메뉴2</a></li>
-            <li class="mx-3"><a href="">대메뉴3</a></li>
-            <li class="mx-3"><a href="">대메뉴4</a></li>
-            <li class="mx-3"><a href="">대메뉴5</a></li>
+            <li class="mx-3 position-relative d1">
+                <a href="" class="gnb_d1_a">회사소개</a>
+                <ul class="position-absolute border p-4">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">CEO인사말</a></li>
+                    <li><a href="">조직도</a></li>
+                </ul>
+            </li>
+            <li class="mx-3 d1"><a href="" class="gnb_d1_a">대메뉴2</a></li>
+            <li class="mx-3 position-relative d1">
+                <a href="" class="gnb_d1_a">대메뉴3</a>
+                <ul class="position-absolute border p-4 d1_ul_left">
+                    <li><a href="">소메뉴1</a></li>
+                    <li><a href="">소메뉴2</a></li>
+                    <li><a href="">소메뉴3</a></li>
+                </ul>
+            </li>
+            <li class="mx-3 d1"><a href="" class="gnb_d1_a">대메뉴4</a></li>
+            <li class="mx-3 d1"><a href="" class="gnb_d1_a">대메뉴5</a></li>
         </ul>
         <ul class="iconMenu d-flex mb-0 ps-0">
             <li class="mx-3"><i>svg아이콘</i><span class="visually-hidden">검색</span></li>

@@ -51,3 +51,35 @@
 //         }
 //     }
 // }
+
+// ---------------서브 메뉴 하드코딩
+#hd {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .gnb {
+        .d1 {
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+            ul { //소메뉴
+                min-width: 80px;
+                white-space: nowrap;
+                background-color: black;
+                display: none;
+                &.d1_ul_left {
+                    left: -1rem;
+                }
+                li {
+                    a {
+                        font-size: 0.9rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

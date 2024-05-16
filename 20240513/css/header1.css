@@ -1,0 +1,20 @@
+#hd a {
+  text-decoration: none;
+  color: black;
+}
+#hd .gnb .d1:hover ul {
+  display: block;
+}
+#hd .gnb .d1 ul {
+  min-width: 80px;
+  white-space: nowrap;
+  background-color: black;
+  display: none;
+}
+#hd .gnb .d1 ul.d1_ul_left {
+  left: -1rem;
+}
+#hd .gnb .d1 ul li a {
+  font-size: 0.9rem;
+  color: white;
+}
