@@ -57,27 +57,31 @@
     a {
         text-decoration: none;
     }
-    .gnb {
+    .gnb { // 대메뉴
         .d1 { // 대메뉴 li
-            &:hover {
-                ul {
-                    display: block;        
+            &:hover { // 대메뉴 hover 시 서브메뉴 노출
+                ul { // 서브메뉴
+                    height: 180px;
                 }
             }
-            .gnb_d1_a { //대메뉴 a
+            .gnb_d1_a { // 대메뉴 a
                 color: black;
                 font-size: 1.2rem;
             }
-            ul { //소메뉴
+            ul { // 서브메뉴
                 min-width: 80px;
                 white-space: nowrap;
                 background-color: black;
-                display: none;
-                &.d1_ul_left {
+                height: 0;
+                transition: height 0.5s;
+                overflow: hidden;
+                padding: 0 1rem !important;
+                border: 0 !important;
+                &.d1_ul_left { // 왼쪽으로 움직인 서브메뉴 
                     left: -1rem;
                 }
-                li {
-                    a {
+                li { // 서브메뉴 li
+                    a { // 서브메뉴 a
                         font-size: 0.9rem;
                         color: white;
                     }
