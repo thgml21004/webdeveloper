@@ -26,3 +26,28 @@
 //     overflow: hidden;
 //     opacity: 0;
 // }
+// ---------------서브메뉴 하드 코딩
+.gnb {
+    a:hover {
+        color: red !important;
+    }
+    &:hover {
+        .d1 {
+        }
+        ul {
+            height: 180px;
+        }
+    }
+    > li:hover {
+        a {
+            color: red;
+        }
+    }
+    ul {
+        top: 100%;
+        min-width: 120px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;        
+    }
+}
