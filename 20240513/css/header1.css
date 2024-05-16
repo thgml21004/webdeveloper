@@ -2,7 +2,7 @@
   text-decoration: none;
 }
 #hd .gnb .d1:hover ul {
-  height: 180px;
+  max-height: 180px;
 }
 #hd .gnb .d1 .gnb_d1_a {
   color: black;
@@ -12,11 +12,16 @@
   min-width: 80px;
   white-space: nowrap;
   background-color: black;
-  height: 0;
-  transition: height 0.5s;
+  max-height: 0;
+  transition: max-height 0.5s;
   overflow: hidden;
   padding: 0 1rem !important;
   border: 0 !important;
+}
+#hd .gnb .d1 ul::before, #hd .gnb .d1 ul::after {
+  content: "";
+  display: block;
+  height: 16px;
 }
 #hd .gnb .d1 ul.d1_ul_left {
   left: -1rem;
