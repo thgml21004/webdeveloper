@@ -56,14 +56,17 @@
 #hd {
     a {
         text-decoration: none;
-        color: black;
     }
     .gnb {
-        .d1 {
+        .d1 { // 대메뉴 li
             &:hover {
                 ul {
-                    display: block;
+                    display: block;        
                 }
+            }
+            .gnb_d1_a { //대메뉴 a
+                color: black;
+                font-size: 1.2rem;
             }
             ul { //소메뉴
                 min-width: 80px;

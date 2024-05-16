@@ -1,9 +1,12 @@
 #hd a {
   text-decoration: none;
-  color: black;
 }
 #hd .gnb .d1:hover ul {
   display: block;
+}
+#hd .gnb .d1 .gnb_d1_a {
+  color: black;
+  font-size: 1.2rem;
 }
 #hd .gnb .d1 ul {
   min-width: 80px;
