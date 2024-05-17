@@ -1,3 +1,6 @@
+#hd {
+  position: relative;
+}
 #hd h1, #hd .iconMenu {
   width: 0;
 }
@@ -8,33 +11,38 @@
 #hd h1 a {
   white-space: nowrap;
 }
-#hd .gnb .gnb_li:hover .gnb_a {
+#hd .gnb::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.8);
+}
+#hd .gnb:hover::before {
+  height: 180px;
+}
+#hd .gnb:hover .gnb_li:hover .gnb_a {
   color: red;
 }
-#hd .gnb .gnb_li:hover .gnb_ul {
-  max-height: 180px;
-  border-radius: 0 0 30px 30px;
-  border-bottom: 1px solid #ccc;
+#hd .gnb:hover .gnb_li .gnb_ul {
+  height: 180px;
+}
+#hd .gnb .gnb_li {
+  padding: 0 35px !important;
 }
 #hd .gnb .gnb_li .gnb_a {
   font-size: 1.2rem;
 }
 #hd .gnb .gnb_li .gnb_ul {
-  background-color: white;
-  padding-left: 0;
-  margin-bottom: 0;
-  min-width: 8rem;
+  min-width: 10rem;
   text-align: center;
-  border: 1px solid #ccc;
-  border-top: 0;
-  border-bottom: 0;
-  border-radius: 0;
-  transform: translateX(-50%);
-  left: 50%;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
-  transition: border-radius 0.5s 1s;
+  transition: 0.5s;
+  left: -35px;
 }
 #hd .gnb .gnb_li .gnb_ul::before, #hd .gnb .gnb_li .gnb_ul::after {
   content: "";
