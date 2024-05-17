@@ -2,10 +2,59 @@
     h1, .iconMenu {
         width: 0;
     }
+    a {
+        color: black;
+        text-decoration: none;
+    }
     h1 {
         a {
             white-space: nowrap;
         }
+    }
+    .gnb {
+        .gnb_li {
+            &:hover {                
+                .gnb_a {
+                    color: red;
+                }
+                .gnb_ul {
+                    max-height: 180px;
+                    border-radius: 0 0 30px 30px;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            .gnb_a {
+                font-size: 1.2rem;
+            }
+            .gnb_ul {
+                background-color: white;
+                padding-left: 0;
+                margin-bottom: 0;
+                min-width: 8rem;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-top: 0;
+                border-bottom: 0;
+                border-radius: 0;
+                // left: 0;
+                // right: 0;
+                //////////// 대메뉴 기준으로 가운데
+                transform: translateX(-50%);
+                left: 50%;
+                //////////// 드롭다운 애니메이션
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s;
+                //////////// border-radius 애니메이션 1초뒤
+                transition: border-radius 0.5s 1s;
+                &::before, 
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 1rem;
+                }
+            }
+        }        
     }
     .iconMenu {
         i {
