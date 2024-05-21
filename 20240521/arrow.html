@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .arrow{
+            width:300px;
+            height:300px;
+            border: 1px solid black;
+            position: relative;
+        }
+       .arrow i {
+            position: absolute;
+            right: 30px;
+            top: 5px;
+            width: 20px;
+            height: 13px;
+        }
+        .arrow i:before,
+        .arrow i:after {
+            display: none;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.2s, margin 0.2s;
+            display: block;
+            width: 20px;
+            height: 13px;
+            background-size: 100% 100%;
+        }        
+        .arrow i:before {
+            opacity: 0;
+            margin-right: 20px;
+            background: url(https://www.samyang.co.kr/resources/kr/global/images/main/main_sec01_bot_list_arrow_blue.svg) 50% 50% no-repeat;            
+        }        
+        .arrow i:after {
+            background: url(https://www.samyang.co.kr/resources/kr/global/images/main/main_sec01_bot_list_arrow.svg) 50% 50% no-repeat;
+        }
+        .arrow:hover i:before {
+            -webkit-animation: arrowAnimationBefore 0.3s forwards 0.3s;
+            animation: arrowAnimationBefore 0.3s forwards 0.3s;
+        }
+        .arrow:hover i:after {
+            -webkit-animation: arrowAnimationAfter 0.3s forwards;
+            animation: arrowAnimationAfter 0.3s forwards;
+        }
+
+        @keyframes arrowAnimationBefore {
+            from {
+                margin-right: 20px;
+                opacity: 0;
+            }
+            to {
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+        @keyframes arrowAnimationAfter {
+            from {
+                margin-right: 0;
+                opacity: 1;
+            }
+            to {
+                margin-right: -15px;
+                opacity: 0;
+            }
+        }
+
+        .circle {
+            width:300px;
+            height:300px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .circle div:after {
+            content: '';
+            display: inline-block;
+            width: 123px;
+            height: 126px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 10;
+            background: url(https://korean.visitkorea.or.kr/resources/images/main/main_showcase_logo.png) no-repeat;
+            animation: rotate_image 20s linear infinite;
+            transform-origin: 50% 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        @keyframes rotate_image{
+            100% {
+                transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow">
+        <i></i>
+    </div>
+    <div class="circle">
+        <div></div>
+    </div>
+</body>
+</html>
