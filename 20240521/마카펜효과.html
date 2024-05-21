@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마카펜효과</title>
+    <style>
+        h1 span {
+            position: relative;
+        }
+        h1 > span::before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            bottom: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(127, 255, 249, 0.685);
+            transition: .5s;
+        }
+        h1:hover > span::before {
+            width: 100%;
+            padding: 0 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>강조에는 이 <span><span>효과</span></span>가 짱이지</h1>
+    
+</body>
+</html>
