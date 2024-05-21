@@ -11,16 +11,27 @@
         h1 > span::before {
             content: "";
             position: absolute;
-            left: -2px;
+            left: 0;
             bottom: 0;
             width: 0;
             height: 100%;
             background-color: rgba(127, 255, 249, 0.685);
-            transition: .5s;
         }
         h1:hover > span::before {
+            animation: widthAni 0.5s forwards;
+            animation-delay: .5s;
+        }
+        /* h1:hover > span::before {
             width: 100%;
             padding: 0 2px;
+        } */
+        @keyframes widthAni {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
         }
     </style>
 </head>
