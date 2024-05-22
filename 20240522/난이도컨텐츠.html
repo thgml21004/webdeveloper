@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형을 고려한 테이블 구조의 레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li, dl, dt, dd {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .checksvg:before{
+            content: ""; /* url()로 이미지를 넣을 수 있지만 이미지 사이즈 제어가 되지 않음*/
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background-image: url(./img/check.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- dl>dt{타이틀컨텐츠}+dd.checksvg*5{리스트들} -->
+    <!-- dl>dt{타이틀컨텐츠}+dd.checksvg.d-flex*5{<span>리스트들</span>} -->
+    <dl>
+        <dt>타이틀컨텐츠</dt>
+        <dd class="checksvg d-flex align-items-center"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex align-items-center"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex align-items-center"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex align-items-center"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex align-items-center"><span>리스트들</span></dd>
+    </dl>
+</body>
+</html>
