@@ -45,13 +45,17 @@
             align-items: center;
         }
         @media (max-width:990px) { /* 애플 : 1024 / 태블릿 사이즈*/
-            #about {
+            /* #about {
                 height: calc(100vw + 50px);
                 display: block;
                 padding: 5rem 0 0;
                 text-align: center;
-                /* background-position: right center; */
-                background-position: -92vw center;
+                background-position: right center;
+            } */
+            #about {
+                height: calc(100vw + 50px);
+                flex-direction: column;
+                background-image: url(./img/bg_mo.jpg);
             }
         }
     </style>
