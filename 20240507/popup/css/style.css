@@ -1,0 +1,33 @@
+.popupShow::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+#popupForm {
+    display: none;
+    background-color: white;
+    min-width: 280px;
+    max-width: 600px;
+    width: 50vw;
+    padding: 1rem;
+    box-sizing: border-box; /*너비를 유지하고 안쪽으로 사이즈를 준다.*/
+    position: absolute; /*position을 준 태그가 올라간다.*/
+    margin: auto; /*바깥여백을 스스로 계산함으로 가운데 정렬*/
+    left: 0;
+    right: 0;
+    top: 10rem;
+    bottom: 10rem;
+}
+.popupShow #popupForm {
+    display: block;
+}
+form li p {
+    display: none;
+}
+input[type='text']:focus + p {
+    display: block;
+}
