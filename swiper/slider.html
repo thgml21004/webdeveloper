@@ -5,53 +5,14 @@
   <meta charset="utf-8" />
   <title>Swiper demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <!-- 최종 업로드시 내 서버에 내장 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-  <!-- Demo styles -->
   <style>
-    html,
     body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
       margin: 0;
       padding: 0;
     }
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 3rem;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-size: 100%; /* width 100%, height auto*/
-      background-position: center;
-      background-repeat: no-repeat;      
-    }
-    .swiper-slide span {
-        transform: translateY(200%);
-        opacity: 0;
-        transition: 1s;
-    }
-    .swiper-slide-active span {
-        transform: translateY(0);
-        opacity: 1;
-    }
     .ad0 {
         background-image: url(./img/banner_bg_01.jpg);        
     }
@@ -61,60 +22,67 @@
     .ad2 {
         background-image: url(./img/banner_bg_03.jpg);
     }
+    .swiper-slide {
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
-    /* .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } */
-
+    .swiper-pagination {
+      bottom: 30px !important;
+    }
     .swiper-pagination-bullet {
       width: auto;
       height: auto;
-      text-align: center;
-      line-height: 20px;
-      font-size: 12px;
-      color: #3c3d06;
-      opacity: 1;
-      /* background: rgba(0, 0, 0, 0.2); */
+      border-radius: 0;
       background: transparent;
+      opacity: 1;
     }
-
     .swiper-pagination-bullet-active {
-      /* color: #fff; */
-      /* background: #007aff; */
-      color: #007aff;
+      color: rgb(217, 255, 0);
     }
   </style>
 </head>
 
 <body>
-  <!-- Swiper -->
-  <div id="doctor" class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide ad0"><span>광고 배너 타이틀 1</span></div>
-      <div class="swiper-slide ad1"><span>광고 배너 타이틀 2</span></div>
-      <div class="swiper-slide ad2"><span>광고 배너 타이틀 3</span></div>
+  <section id="mainBanner">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ad0">
+          <span>광고 배너 타이틀 1</span>
+        </div>
+        <div class="swiper-slide ad1">
+          <span>광고 배너 타이틀 2</span>
+        </div>
+        <div class="swiper-slide ad2">
+          <span>광고 배너 타이틀 3</span>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
+  </section>
 
-  <!-- Swiper JS -->
-  <!-- 최종 업로드시 내 서버에 내장 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
   <script>
-    const swiper = new Swiper("#doctor.mySwiper", {
+    // 실행식
+    const bannerText = ["편강한의원 찐후기", "한약소개", "예약하기"];
+
+    const swiper_mainBanner = new Swiper("#mainBanner .swiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
-        el: "#doctor .swiper-pagination",
+        el: "#mainBanner .swiper-pagination",
         clickable: true,
-        renderBullet: function (index, className) {
-          return `<span class="${className}">뭐라도</span>`;
+        renderBullet: function (index, className) { // renderBullet : 메서드
+          return `<span class="${className}">${bannerText[index]}</span>`; // return : 화면에 노출
         },
       },
-    });
+    });    
   </script>
 </body>
 
