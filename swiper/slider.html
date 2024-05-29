@@ -7,61 +7,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    body, p{
       margin: 0;
       padding: 0;
     }
-
-    .ad0 {
-        background-image: url(./img/banner_bg_01.jpg);        
+    .bg0{
+        background-image: url(https://www.wwdoctor.com/static/asset/images/main/banner_bg_01.jpg);        
     }
-    .ad1 {
-        background-image: url(./img/banner_bg_02.jpg);
+    .bg1{
+        background-image: url(https://www.wwdoctor.com/static/asset/images/main//banner_bg_02.jpg);        
     }
-    .ad2 {
-        background-image: url(./img/banner_bg_03.jpg);
+    .bg2{
+        background-image: url(https://www.wwdoctor.com/static/asset/images/main//banner_bg_03.jpg);        
     }
-    .swiper-slide {
+    .swiper-slide{
       height: 100vh;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: cover;    
+    }
+    .swiper-slide-active{
+
+    }
+    #mainBanner .swiper-pagination {
+      right: 0;
+      bottom: 3rem;
+      text-align: left;
+    }
+    .swiper-pagination-bullet{
+      width:auto !important;
+      height:auto !important;
+      border-radius: 0 !important;
+      background-color: transparent !important;
+      opacity: 1 !important;
+      line-height: 2;
+    }
+    .swiper-pagination-bullet-active{
+      color:rgb(10, 207, 214)
+    }
+    .swiper-pagination-bullet::before{
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: rgba(255,255,255,0.5);
+    }
+    .swiper-pagination-bullet::after{
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      transition: 3s;
+      background-color: rgba(255, 0, 0, 1);
+    }
+    .swiper-pagination-bullet-active::after{
+      width: 100%;
+    }
+    .container{
+      max-width:1440px;
+      margin: 0 auto;
+    }
+    .h-100 {
+      height: 100%;
+    }
+    .d-flex {
+      display: flex;
+    }    
+    .aic {
+      align-items: center;
+    }
+    .fc_white {
+    color: #fff;
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .f64 {
+    font-size: 64px;
+    }
+    .notoS {
+    font-family: 'Noto Serif KR', serif;
+    }
+    .overh {
+    overflow: hidden !important;
     }
 
-    .swiper-pagination {
-      bottom: 30px !important;
-    }
-    .swiper-pagination-bullet {
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      background: transparent;
-      opacity: 1;
-    }
-    .swiper-pagination-bullet-active {
-      color: rgb(217, 255, 0);
-    }
+    
+   
   </style>
 </head>
 
 <body>
+  <!-- Swiper -->
   <section id="mainBanner">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide ad0">
-          <span>광고 배너 타이틀 1</span>
-        </div>
-        <div class="swiper-slide ad1">
-          <span>광고 배너 타이틀 2</span>
-        </div>
-        <div class="swiper-slide ad2">
-          <span>광고 배너 타이틀 3</span>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div class="swiper" >
+          <div class="swiper-wrapper">
+                <div class="swiper-slide bg0">
+                  <div class="container d-flex aic h-100">
+                      <h2 class="notoS f64 fc_white medium">
+                        <p class="overh">
+                            <span>비염, 천식, 폐질환</span>
+                        </p>
+                        <p class="overh">
+                            <span>편강한의원</span>
+                        </p>
+                      </h2>
+                  </div>                    
+                </div>
+                <div class="swiper-slide  bg1">
+                  <div class="container d-flex aic h-100">
+                    <h2 class="notoS f64 fc_white medium">
+                      <p class="overh">
+                          <span>근본치료에 집중하는</span>
+                      </p>
+                      <p class="overh">
+                          <span>편강 원인 치유법</span>
+                      </p>
+                  </h2>
+                  </div>  
+                </div>
+                <div class="swiper-slide  bg2">
+                  <div class="container d-flex aic h-100">
+                    <h2 class="notoS f64 fc_white medium">
+                      <p class="overh">
+                          <span>편강 의학이</span>
+                      </p>
+                      <p class="overh">
+                          <span>세계로 갑니다</span>
+                      </p>
+                  </h2>
+                  </div>  
+                </div>    
+          </div>
+          <div class="swiper-pagination container"></div>
     </div>
   </section>
+
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -72,7 +165,7 @@
     const swiper_mainBanner = new Swiper("#mainBanner .swiper", {
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       },
       pagination: {
