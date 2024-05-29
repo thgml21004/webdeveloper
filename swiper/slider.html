@@ -17,14 +17,42 @@
       margin: 0;
       padding: 0;
     }
+    .container{
+      max-width:1440px;
+      margin: 0 auto;
+    }
+    .h-100 {
+      height: 100%;
+    }
+    .d-flex {
+      display: flex;
+    }    
+    .aic {
+      align-items: center;
+    }
+    .fc_white {
+    color: #fff;
+    }
+    .medium {
+        font-weight: 500;
+    }
+    .f64 {
+    font-size: 64px;
+    }
+    .notoS {
+    font-family: 'Noto Serif KR', serif;
+    }
+    .overh {
+    overflow: hidden !important;
+    }
     .bg0{
-        background-image: url(https://www.wwdoctor.com/static/asset/images/main/banner_bg_01.jpg);        
+        background-image: url(./img/banner_bg_01.jpg);        
     }
     .bg1{
-        background-image: url(https://www.wwdoctor.com/static/asset/images/main//banner_bg_02.jpg);        
+        background-image: url(./img/banner_bg_02.jpg);        
     }
     .bg2{
-        background-image: url(https://www.wwdoctor.com/static/asset/images/main//banner_bg_03.jpg);        
+        background-image: url(./img/banner_bg_03.jpg);        
     }
     .swiper-slide{
       height: 100vh;
@@ -36,8 +64,8 @@
 
     }
     #mainBanner .swiper-pagination {
-      right: 0;
-      bottom: 3rem;
+      width: auto;
+      bottom: 0;
       text-align: left;
     }
     .swiper-pagination-bullet{
@@ -74,38 +102,14 @@
     .swiper-pagination-bullet-active::after{
       width: 100%;
       transition: 3s;
+      z-index: 1;
     }
-    .container{
-      max-width:1440px;
-      margin: 0 auto;
+    .btns{
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:5rem;            
     }
-    .h-100 {
-      height: 100%;
-    }
-    .d-flex {
-      display: flex;
-    }    
-    .aic {
-      align-items: center;
-    }
-    .fc_white {
-    color: #fff;
-    }
-    .medium {
-        font-weight: 500;
-    }
-    .f64 {
-    font-size: 64px;
-    }
-    .notoS {
-    font-family: 'Noto Serif KR', serif;
-    }
-    .overh {
-    overflow: hidden !important;
-    }
-
-    
-   
   </style>
 </head>
 
@@ -113,48 +117,49 @@
   <!-- Swiper -->
   <section id="mainBanner">
     <div class="swiper" >
-          <div class="swiper-wrapper">
-                <div class="swiper-slide bg0">
-                  <div class="container d-flex aic h-100">
-                      <h2 class="notoS f64 fc_white medium">
-                        <p class="overh">
-                            <span>비염, 천식, 폐질환</span>
-                        </p>
-                        <p class="overh">
-                            <span>편강한의원</span>
-                        </p>
-                      </h2>
-                  </div>                    
-                </div>
-                <div class="swiper-slide  bg1">
-                  <div class="container d-flex aic h-100">
-                    <h2 class="notoS f64 fc_white medium">
-                      <p class="overh">
-                          <span>근본치료에 집중하는</span>
-                      </p>
-                      <p class="overh">
-                          <span>편강 원인 치유법</span>
-                      </p>
-                  </h2>
-                  </div>  
-                </div>
-                <div class="swiper-slide  bg2">
-                  <div class="container d-flex aic h-100">
-                    <h2 class="notoS f64 fc_white medium">
-                      <p class="overh">
-                          <span>편강 의학이</span>
-                      </p>
-                      <p class="overh">
-                          <span>세계로 갑니다</span>
-                      </p>
-                  </h2>
-                  </div>  
-                </div>    
-          </div>
-          <div class="swiper-pagination container"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg0">
+          <div class="container d-flex aic h-100">
+              <h2 class="notoS f64 fc_white medium">
+                <p class="overh">
+                  <span>비염, 천식, 폐질환</span>
+                </p>
+                <p class="overh">
+                  <span>편강한의원</span>
+                </p>
+              </h2>
+          </div>                    
+        </div>
+        <div class="swiper-slide  bg1">
+          <div class="container d-flex aic h-100">
+            <h2 class="notoS f64 fc_white medium">
+              <p class="overh">
+                <span>근본치료에 집중하는</span>
+              </p>
+              <p class="overh">
+                <span>편강 원인 치유법</span>
+              </p>
+          </h2>
+          </div>  
+        </div>
+        <div class="swiper-slide  bg2">
+          <div class="container d-flex aic h-100">
+            <h2 class="notoS f64 fc_white medium">
+              <p class="overh">
+                <span>편강 의학이</span>
+              </p>
+              <p class="overh">
+                <span>세계로 갑니다</span>
+              </p>
+          </h2>
+          </div>  
+        </div>
+      </div>
+      <div class="container btns d-flex">
+        <div class="swiper-pagination"></div>
+      </div>          
     </div>
   </section>
-
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
