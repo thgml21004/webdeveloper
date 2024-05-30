@@ -7,8 +7,7 @@
 
 </head>
 <body>
-    <ul id="gnb">
-    </ul>
+    <ul id="gnb"></ul>
 
     <script>
         const nav_data = [
@@ -27,11 +26,46 @@
         ]
 
         // document.body.innerHTML = nav_data[0].gnb_li_a;
-        document.querySelector("#gnb").innerHTML = `
-            <li><a href="${nav_data[0].gnb_li_href}">${nav_data[0].gnb_li_a}</a></li>
-            <li><a href="${nav_data[1].gnb_li_href}">${nav_data[1].gnb_li_a}</a></li>
-            <li><a href="${nav_data[2].gnb_li_href}">${nav_data[2].gnb_li_a}</a></li>
-        `;
+        // document.querySelector("#gnb").innerHTML = `
+        //     <li><a href="${nav_data[0].gnb_li_href}">${nav_data[0].gnb_li_a}</a></li>
+        //     <li><a href="${nav_data[1].gnb_li_href}">${nav_data[1].gnb_li_a}</a></li>
+        //     <li><a href="${nav_data[2].gnb_li_href}">${nav_data[2].gnb_li_a}</a></li>
+        // `;
+
+        // for문 구현        
+        const targetul = document.getElementById("gnb"); //element는 const로
+        let gnblis = ""; // 네비게이션 li
+
+        for(i in nav_data){
+            gnblis += `<li><a href="${nav_data[i]["gnb_li_href"]}">${nav_data[i].gnb_li_a}</a></li>`;
+        }
+
+        targetul.innerHTML = gnblis;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let mynavidb = "";
+        // for(i in nav_data){
+        //     mynavidb += `<li><a href="${nav_data[i].gnb_li_href}">${nav_data[i].gnb_li_a}</a></li>`
+
+        // }
+        // document.querySelector("#gnb").innerHTML = mynavidb;
     </script>
 </body>
 </html>
