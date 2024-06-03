@@ -93,36 +93,34 @@ const hd_yys ={
 window.onload = function() {  // 화면 로딩이 끝나면 실행되라 // 아래것 보다 이걸 씀 // 이벤트 저장
     let navitag = "";
 
-    // for(x in hd_yys.gnb) {
-    //     navitag += `<li class='${hd_yys.gnb[x].cls[0]}'>
-    //         <a href='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
-    //             ${hd_yys.gnb[x].Text}                
-    //         </a>`;
-    //     navitag += `<ul class='${hd_yys.gnb[x].cls[2]}'>`;
-    //     for(j in hd_yys.gnb[x].gnb_ul_li) {
-    //         navitag += `<li class='${hd_yys.gnb[x].cls[3]}'><a href='${hd_yys.gnb[x].gnb_ul_li[j].href}'>${hd_yys.gnb[x].gnb_ul_li[j].Text}</a></li>`;
-    //     }
-    //     navitag += `</ul>`;
-    //     navitag += `</li>`; // 대메뉴
-    // }
-
-    
     for(x in hd_yys.gnb) {
         navitag += `<li class='${hd_yys.gnb[x].cls[0]}'>
             <a href='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
                 ${hd_yys.gnb[x].Text}                
-            </a>
-                <ul class='${hd_yys.gnb[x].cls[2]}'>`;
-                for(i in hd_yys.gnb[x].gnb_ul_li) {
-                    navitag += `<li class='${hd_yys.gnb[x].cls[3]}'>
-                        <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
-                    </li>`
-                }
-            navitag += `</ul>
-            </li>`
+            </a>`;
+        navitag += `<ul class='${hd_yys.gnb[x].cls[2]}'>`;
+        for(j in hd_yys.gnb[x].gnb_ul_li) {
+            navitag += `<li class='${hd_yys.gnb[x].cls[3]}'><a href='${hd_yys.gnb[x].gnb_ul_li[j].href}'>${hd_yys.gnb[x].gnb_ul_li[j].Text}</a></li>`;
+        }
+        navitag += `</ul>`;
+        navitag += `</li>`; // 대메뉴
     }
 
-    // <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
+    
+    // for(x in hd_yys.gnb) {
+    //     navitag += `<li class='${hd_yys.gnb[x].cls[0]}'>
+    //         <a href='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
+    //             ${hd_yys.gnb[x].Text}                
+    //         </a>
+    //             <ul class='${hd_yys.gnb[x].cls[2]}'>`;
+    //             for(i in hd_yys.gnb[x].gnb_ul_li) {
+    //                 navitag += `<li class='${hd_yys.gnb[x].cls[3]}'>
+    //                     <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
+    //                 </li>`
+    //             }
+    //         navitag += `</ul>
+    //         </li>`
+    // }
 
     document.querySelector("#gnb").innerHTML = navitag;
 
