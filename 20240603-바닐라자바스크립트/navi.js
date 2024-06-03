@@ -97,20 +97,26 @@ window.onload = function() {  // 화면 로딩이 끝나면 실행되라 // 아�
         navitag += `<li class='${hd_yys.gnb[x].cls[0]}'>
             <a href='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
                 ${hd_yys.gnb[x].Text}                
-            </a>
-            <ul class='${hd_yys.gnb[x].cls[2]}'>`
-                for(i in hd_yys.gnb[x].gnb_ul_li) {
-                    navitag += `<li class='${hd_yys.gnb[x].cls[3]}'>
-                        <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
-                    </li>`
-                }
-            `</ul>
-        </li>`; // 대메뉴
+            </a>`;
+        navitag += `<ul class='${hd_yys.gnb[x].cls[2]}'>`;
+        for(j in hd_yys.gnb[x].gnb_ul_li) {
+            navitag += `<li class='${hd_yys.gnb[x].cls[3]}'><a href='${hd_yys.gnb[x].gnb_ul_li[j].href}'>${hd_yys.gnb[x].gnb_ul_li[j].Text}</a></li>`;
+        }
+        navitag += `</ul>`;
+        navitag += `</li>`; // 대메뉴
     }
 
     // <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
 
     document.querySelector("#gnb").innerHTML = navitag;
+
+//     <ul class='${hd_yys.gnb[x].cls[2]}'>`
+//     for(i in hd_yys.gnb[x].gnb_ul_li) {
+//         navitag += `<li class='${hd_yys.gnb[x].cls[3]}'>
+//             <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
+//         </li>`
+//     }
+// `</ul>
 
 }
 // window.addEventListener('load', function() {}) // 위와 같은 역활 // 이벤트 중 load되었을 때 실행되라 // 이벤트 선택
