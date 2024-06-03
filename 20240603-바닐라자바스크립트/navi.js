@@ -9,7 +9,7 @@ const hd_yys ={
         {
         Text : "우리의미션",
         href : "misson.html",
-        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a","gnb_ul abs","gnb_ul_li"],
+        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a1","gnb_ul abs","gnb_ul_li"],
         gnb_ul_li : [
             {
                 Text : "미션",
@@ -25,7 +25,7 @@ const hd_yys ={
     {
         Text : "정기배송",
         href : "misson.html",
-        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a","gnb_ul abs","gnb_ul_li"],
+        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a2","gnb_ul abs","gnb_ul_li"],
         gnb_ul_li : [
             {
                 Text : "후기",
@@ -44,7 +44,7 @@ const hd_yys ={
     {
         Text : "싱싱마켓",
         href : "misson.html",
-        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a","gnb_ul abs","gnb_ul_li"],
+        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a3","gnb_ul abs","gnb_ul_li"],
         gnb_ul_li : [
             {
                 Text : "인기상품",
@@ -59,7 +59,7 @@ const hd_yys ={
     {
         Text : "커뮤니티",
         href : "misson.html",
-        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a","gnb_ul abs","gnb_ul_li"],
+        cls : ["nav-mission me-5 gnb_li rel","d-block gnb_a4","gnb_ul abs","gnb_ul_li"],
         gnb_ul_li : [
             {
                 Text : "오늘의레시피",
@@ -91,8 +91,26 @@ const hd_yys ={
 }
 
 window.onload = function() {  // 화면 로딩이 끝나면 실행되라 // 아래것 보다 이걸 씀 // 이벤트 저장
-    document.querySelector("#hd h1").innerHTML = `<a href="${hd_yys["logo"].href}"><img src="${hd_yys["logo"].img}" alt="${hd_yys["logo"].Text}"></a>`;
-    document.querySelector("#gnb li").innerHTML = `<a href="${hd_yys["gnb"][0].href}" class="${hd_yys["gnb"][0].cls[0]}">${hd_yys["gnb"][0].Text}</a>`
+    let navitag = "";
+
+    for(x in hd_yys.gnb) {
+        navitag += `<li class='${hd_yys.gnb[x].cls[0]}'>
+            <a href='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
+                ${hd_yys.gnb[x].Text}                
+            </a>
+            <ul class='${hd_yys.gnb[x].cls[2]}'>`
+                for(i in hd_yys.gnb[x].gnb_ul_li) {
+                    navitag += `<li class='${hd_yys.gnb[x].cls[3]}'>
+                        <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
+                    </li>`
+                }
+            `</ul>
+        </li>`; // 대메뉴
+    }
+
+    // <a href='${hd_yys.gnb[x].gnb_ul_li[i].href}'>${hd_yys.gnb[x].gnb_ul_li[i].Text}</a>
+
+    document.querySelector("#gnb").innerHTML = navitag;
 
 }
 // window.addEventListener('load', function() {}) // 위와 같은 역활 // 이벤트 중 load되었을 때 실행되라 // 이벤트 선택
