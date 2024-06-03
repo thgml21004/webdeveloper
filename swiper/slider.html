@@ -118,7 +118,7 @@
   <section id="mainBanner">
     <div class="swiper" >
       <div class="swiper-wrapper">
-        <div class="swiper-slide bg0" data-btn="평강탕 할인">
+        <div class="swiper-slide bg0" data-btn="평강탕 할인" data-color="red">
           <div class="container d-flex aic h-100">
               <h2 class="notoS f64 fc_white medium">
                 <p class="overh">
@@ -130,7 +130,7 @@
               </h2>
           </div>                    
         </div>
-        <div class="swiper-slide  bg1" data-btn="버튼 글자 태그에서 수정">
+        <div class="swiper-slide  bg1" data-btn="버튼 글자 태그에서 수정" data-color="blue">
           <div class="container d-flex aic h-100">
             <h2 class="notoS f64 fc_white medium">
               <p class="overh">
@@ -142,7 +142,7 @@
           </h2>
           </div>  
         </div>
-        <div class="swiper-slide  bg2" data-btn="dataset읜 변수임">
+        <div class="swiper-slide  bg2" data-btn="dataset읜 변수임" data-color="pink">
           <div class="container d-flex aic h-100">
             <h2 class="notoS f64 fc_white medium">
               <p class="overh">
@@ -179,9 +179,9 @@
         renderBullet: function (index, className) { // renderBullet : 메서드
           //console.log(this); // swiper_mainBanner의 정보 출력 됨
           // console.log(this.slides[index]); // 각각의 슬라이드가 slides에 배열 데이터로 들어가 있다.
-          console.log(this.slides[index].dataset.btn);
+          // console.log(this.slides[index].dataset.btn); // 순번을 넣어 하나 하나 접근하여 dataset 확인
 
-          return `<span class="${className}">${this.slides[index].dataset.btn}</span>`; // return : 화면에 노출
+          return `<span style="color: ${this.slides[index].dataset.color}" class="${className}">${this.slides[index].dataset.btn}</span>`; // return : 화면에 노출
           // return 아래에 쓰면 아무것도 실행이 되지 않는다.
         },
       },
