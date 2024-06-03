@@ -1,14 +1,17 @@
-let count = '';
+const yo = ["월","화","수","목","금","토","일"];
 
-for(var i = 0; i < 4; i++) {
-    count += `<li> \n`;
-    count += `\t <a href=''>${i}번 대메뉴</a> \n`;
-    count += `\t <ul> \n`;
-    for(var j = 0; j < 5; j++) {
-        count += `\t \t <li>${j}번 소메뉴</li> \n`;
+
+
+
+let count = '';
+for(var i = 1; i < 5; i++) {
+    count += `${i}주\n`;
+
+    for(var j in yo) {
+        count += `${yo[j]}요일\n`;
     }
-    count += `\t </ul> \n`;
-    count += `</li> \n`;
+
+    count += `${i} 마침\n`
 }
 
 console.log(count);
