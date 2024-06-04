@@ -1,4 +1,4 @@
-import hd_yys from "./navi.json";
+import hd_yys from "./navi.json";  // navi.json 데이터 파일 연결
 
 window.onload = function() {  // 화면 로딩이 끝나면 실행되라 // 아래것 보다 이걸 씀 // 이벤트 저장
     let navitag = "";
