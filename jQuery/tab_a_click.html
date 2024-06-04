@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a 클릭했을 때 jquery</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+        .on{color:red}
+        #tab{
+            display: flex;
+        }
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    <script>
+         $(document).ready(function(){
+          
+              $("#tab li a").click(function(){
+                const targetdiv = $(this).attr('href');             
+                $(targetdiv).removeClass('d-none').siblings().addClass('d-none');
+                $(this).addClass('on').parent().siblings().find('a').removeClass('on');
+
+                
+              })
+         })
+    </script>
+</head>
+<body>
+    <ul id="tab">
+        <li class="notice"><a href="#notice" class="on">공지사항</a></li>
+        <li class="gallery"><a href="#gallery">갤러리</a></li>
+        <li class="qna"><a href="#qna">QNA</a></li>
+     </ul>
+     <div class="content">
+         <div id="notice">
+             공지사항컨텐츠
+         </div>
+         <div id="gallery" class="d-none">
+             갤러리컨텐츠
+         </div>
+         <div id="qna" class="d-none">
+             문의컨텐츠
+         </div>
+     </div>    
+</body>
+</html>
