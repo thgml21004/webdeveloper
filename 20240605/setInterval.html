@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주기적으로 실행하는 setInterval</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        // $(function() {}) //  $(document).ready(function() {}) 축약
+        $(function() {
+            const bglist = ["pink","red","blue","green"];
+            let count = 0;
+            setInterval(function() {
+                count++;
+                count = count % bglist.length; // count에 들어오는 값 나누기 4는 몫이 0이고 나머지가 0,1,2,3으로 들어온다. // bglist.length는 숫자 4를 의미, 4로 나누었을 때 나머지를 구하는 연산자
+                console.log(count);
+                $("body").css("background", bglist[count]);
+            }, 3000); // 3초뒤에 3초마다 실행
+            $("body").css("background", bglist[count]); // 화면이 열리자마자 1회 실행 // pink색이 입혀짐
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
