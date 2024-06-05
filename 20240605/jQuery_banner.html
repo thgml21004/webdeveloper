@@ -38,8 +38,9 @@
             $(".banner-slide").width(aniWidth); // .banner width값을 넣어라.
             // $(".banner-wrapper").css("marginLeft", -aniWidth); // .banner width값 만큼 옆으로 움직여라 => 두번째 .banner-slide가 보여짐
             setInterval(function() {
-
                 $(".banner-wrapper").animate({"marginLeft" : "-="+aniWidth}, 400, function() {
+                    $(".banner-slide").eq(0).appendTo($(".banner-wrapper")); // $(".banner-slide").eq(0) = $(".banner-slide:first-child") : .banner-slide 첫번째 태그
+                    $(".banner-wrapper").css({"marginLeft" : 0});
                 }); // -=aniWidth : .banner width값을 계속 넣어 추가로 더 빼겠다.
             }, 3000);
         })
