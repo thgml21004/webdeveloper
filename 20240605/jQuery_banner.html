@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            overflow: hidden;
+        }
+        .banner-wrapper {
+            display: flex;
+            width: 10000000px;
+        }
+        .banner-slide {
+            /* width: 100vw; 자바스크립트로 넣기*/
+            height: calc(100vh - 80px);
+        }
+        .bg0 {
+            background-color: #5f9ea0;
+        }
+        .bg1 {
+            background-color: #a05f5f;
+        }
+        .bg2 {
+            background-color: #8d5fa0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            const aniWidth = $(".banner").width(); // .banner width를 가져와라
+            $(".banner-slide").width(aniWidth); // .banner width값을 넣어라.
+            // $(".banner-wrapper").css("marginLeft", -aniWidth); // .banner width값 만큼 옆으로 움직여라
+            $(".banner-wrapper").animate({"marginLeft" : -aniWidth}, 400);
+        })
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-wrapper">
+            <div class="banner-slide bg0"></div>
+            <div class="banner-slide bg1"></div>
+            <div class="banner-slide bg2"></div>
+        </div>
+        <div class="banner-btn"></div>
+    </div>
+</body>
+</html>
