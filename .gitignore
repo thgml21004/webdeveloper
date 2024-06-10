@@ -10,3 +10,4 @@
 **/*.xml
 **/*.json
 **/*.csv
+.vscode
