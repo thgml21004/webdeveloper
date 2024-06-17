@@ -36,12 +36,14 @@
 
         // const targetdiv = document.getElementById("tabcontent");
         const targetdivp = document.querySelectorAll("#tabcontent p");
-        targetdivp.forEach(function(ele, idx) {
-            ele.innerHTML = mapinfo[0].위도;
-            ele.innerHTML = mapinfo[0].경도;
+        const btns = document.querySelectorAll(".btn");
+        
+        btns.forEach(function(ele, idx) {
+            ele.addEventListener('click', function() {
+                targetdivp[0].innerHTML = mapinfo[idx].위도;
+                targetdivp[1].innerHTML = mapinfo[idx].경도;
+            })
         })
-        targetdivp[0].innerHTML = mapinfo[0].위도;
-        targetdivp[1].innerHTML = mapinfo[0].경도;
 
     </script>
 </body>
