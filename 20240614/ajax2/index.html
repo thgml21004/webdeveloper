@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
+  <script>
+
+    $(document).ready(function(){
+        $.ajax({
+            url: "/20240614/ajax2/json/data.json",
+            type: "GET",
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+                $("#target p").html(data.text)
+            },
+            error: function(x, b, c) {
+                console.log(x, b, c); //b: 200 가장 좋은 번호(성공한 번호)=> success로 감
+            }
+        })
+    })
+  </script>
+</head>
+<body>
+    <div class="wrap">
+        <div id="target">
+            <h2>APi호출</h2>
+            <p>여기에 비동기로 데이터를 끌고와서 출력하게됨</p>
+        </div>      
+    </div>
+</body>
+</html>
