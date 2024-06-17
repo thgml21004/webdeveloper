@@ -29,6 +29,9 @@
                 
                 const dataMapValue = this.getAttribute('data-map');
                 const dataMapInfo = JSON.parse(dataMapValue);
+
+                console.log(Array.isArray(dataMapValue)); // false
+                console.log(Array.isArray(dataMapInfo)); // true
                 
                 mapoutput (dataMapInfo[0], dataMapInfo[1])
             })
