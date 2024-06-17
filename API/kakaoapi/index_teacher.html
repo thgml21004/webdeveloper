@@ -7,10 +7,17 @@
 </head>
 <body>
     <div id="mapBtn">
+        <!-- 개발자가 풀어서 작업 거의 100% 이렇게 온다. -->
         <!-- <button class="btn" data-map="[위도, 경도]">장소명</button> -->
         <button class="btn" data-map="[37.5088099, 126.8912061]">그린컴퓨터아카데미 - 신도림</button>
         <button class="btn" data-map="[37.4966645, 127.0629804]">그린컴퓨터아카데미 - 강남</button>
         <button class="btn" data-map="[37.6818227, 126.6265338]">그린컴퓨터아카데미 - 김포</button>
+        <!-- 데이터를 태그에 저장 dataset -->
+        <!-- 작업하기 쉬운 dataset 버전 -->
+        <!-- <button class="btn" data-map1=위도 data-map1=경도>장소명</button> -->
+        <!-- <button class="btn" data-map1=37.5088099 data-map2=126.8912061>그린컴퓨터아카데미 - 신도림</button>
+        <button class="btn" data-map1=37.4966645 data-map2=127.0629804>그린컴퓨터아카데미 - 강남</button>
+        <button class="btn" data-map1=37.6818227 data-map2=126.6265338>그린컴퓨터아카데미 - 김포</button> -->
     </div>
     
     <div id="map" style="width:100%;height:350px;"></div>
@@ -23,17 +30,15 @@
         const btns = document.querySelectorAll("#mapBtn .btn");
         btns.forEach(function(ele, idx) {
             ele.addEventListener('click', function() {
-                console.log(`${ele}가 클릭하면 ${idx}번째 버튼을 클릭 ${this}가 클릭`); // [object HTMLButtonElement]가 클릭하면 0번째 버튼을 클릭 [object HTMLButtonElement]가 클릭
-                // console.log(this.dataset.map, Array.isArray(this.dataset.map)); // DOMStringMap {map: '[37.5088099, 126.8912061]'}
-                // mapoutput (37.5088099, 126.8912061)
+                //  data-변수명 = 값 형태로 태그에 직접 삽입
+                // 자바스크립트가 접근할때는 dataset.변수명으로 접금
                 
-                const dataMapValue = this.getAttribute('data-map');
-                const dataMapInfo = JSON.parse(dataMapValue);
+                console.log("처음 데이터 타입", typeof this.dataset.map); // string
+                const convertDB = JSON.parse(this.dataset.map); // 자바스크립트형태로
+                console.log("타입", typeof convertDB, convertDB[0]); // object, 37.5088099
 
-                console.log(Array.isArray(dataMapValue)); // false
-                console.log(Array.isArray(dataMapInfo)); // true
+                mapoutput (convertDB[0], convertDB[1]);
                 
-                mapoutput (dataMapInfo[0], dataMapInfo[1])
             })
         })
 
