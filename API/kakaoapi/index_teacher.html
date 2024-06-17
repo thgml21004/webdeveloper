@@ -34,7 +34,7 @@
                 // 자바스크립트가 접근할때는 dataset.변수명으로 접금
                 
                 console.log("처음 데이터 타입", typeof this.dataset.map); // string
-                const convertDB = JSON.parse(this.dataset.map); // 자바스크립트형태로
+                const convertDB = JSON.parse(this.dataset.map); // 자바스크립트형태로 convert : 데이터의 형식을 다른 형식으로 변환
                 console.log("타입", typeof convertDB, convertDB[0]); // object, 37.5088099
 
                 mapoutput (convertDB[0], convertDB[1]);
