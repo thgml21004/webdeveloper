@@ -6,49 +6,28 @@
     
 </head>
 <body>
-    그린컴퓨터아카데미 - 신도림
+    <button class="btn">그린컴퓨터아카데미 - 신도림</button>
+    <button class="btn">그린컴퓨터아카데미 - 강남</button>
+    <button class="btn">그린컴퓨터아카데미 - 김포</button>
+    
     <div id="map" style="width:100%;height:350px;"></div>
-    <br>
-    그린컴퓨터아카데미 - 강남
-    <div id="map2" style="width:100%;height:350px;"></div>
-    <br>
-    그린컴퓨터아카데미 - 김포
-    <div id="map3" style="width:100%;height:350px;"></div>
 
     <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=1dfea00599b33c2aa821c6bc284ea8e0"></script>
     <script>
-        const mapContainer = document.getElementById('map'), // 지도를 표시할 div
+
+        mapoutput (37.5088099, 126.8912061)
+
+        function mapoutput (a, b) {
+        
+            const mapContainer = document.getElementById('map'),
             mapOption = { 
-                center: new kakao.maps.LatLng(37.5088099, 126.8912061), // 지도의 중심좌표
-                // draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
-                level: 3 // 지도의 확대 레벨
+                center: new kakao.maps.LatLng(a, b),
+                level: 3
             };
+            
+            const map = new kakao.maps.Map(mapContainer, mapOption);
+        }
 
-        const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        
-        const mapContainer2 = document.getElementById('map2'), // 지도를 표시할 div
-        
-        mapOption2 = { 
-                center: new kakao.maps.LatLng(37.4966645, 127.0629804), // 지도의 중심좌표
-                // draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
-                level: 3 // 지도의 확대 레벨
-            };
-
-        const map2 = new kakao.maps.Map(mapContainer2, mapOption2); // 지도를 생성합니다
-
-
-        
-        const mapContainer3 = document.getElementById('map3') // 지도를 표시할 div
-        
-        mapOption3 = { 
-                center: new kakao.maps.LatLng(37.6818227, 126.6265338), // 지도의 중심좌표
-                // draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
-                level: 3 // 지도의 확대 레벨
-            };
-
-        const map3 = new kakao.maps.Map(mapContainer3, mapOption3); // 지도를 생성합니다
-                
     </script>
 </body>
 </html>
