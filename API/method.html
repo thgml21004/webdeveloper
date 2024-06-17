@@ -38,12 +38,18 @@
         const targetdivp = document.querySelectorAll("#tabcontent p");
         const btns = document.querySelectorAll(".btn");
         
-        btns.forEach(function(ele, idx) {
+        btns.forEach(function(ele, idx) { // ele, idx => 매개인자
+            // ele : 각 버튼, idx : 0 ~ 순번
             ele.addEventListener('click', function() {
-                targetdivp[0].innerHTML = mapinfo[idx].위도;
-                targetdivp[1].innerHTML = mapinfo[idx].경도;
+                contentinner(idx)
             })
         })
+
+        function contentinner(num) { // 재사용 // num => 매개인자 // 매개인자가 있는 함수
+            // 선언적함수 : 위치상관없이 먼저 번역 저장
+            targetdivp[0].innerHTML = mapinfo[num].위도;
+            targetdivp[1].innerHTML = mapinfo[num].경도;
+        }
 
     </script>
 </body>
