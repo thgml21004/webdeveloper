@@ -1,13 +1,19 @@
 # git에 올리지 않을 파일 또는 폴더를 적는다.
 # git init을 하기전에 .gitignore 파일을 제일먼저 만들어서 git에 올리지 않을 데이터를 넣어둔다.
 
+.vscode
 # data폴더를 뺀다.
 **/data/
 # origin어쩌고.jpg는 모두 뺀다.
 **/origin*.jpg
 # data어쩌고 파일을 모두 뺀다.
 **/data*.*
+**/*config.*
 **/*.xml
 **/*.json
 **/*.csv
-.vscode
+
+**/*.ai
+**/*.pdf
+**/*.psd
+**/*.zip
