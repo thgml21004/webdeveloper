@@ -4,8 +4,15 @@ $(document).ready(function() {
         type : "GET",
         dataType : "json",
         success : function(data) {
-
+            console.log(data, typeof data);
+            let gnbli = "";
+            data["menu"].forEach(function(ele, idx) {
+                gnbli +=`<li>${ele["catecory"]}</li>`
+            });
+            $(".gnb").html(gnbli);
         },
-        error : function() {}
+        error : function(a, b, c) {
+            console.log(a, b, c);
+        }
     })
 })

@@ -13,7 +13,19 @@ $(document).ready(function() {
             data["menu"].forEach(function(ele, idx) {
                 // 순서대로 순회하면서 실행
                 console.log(`${idx}번째 데이터는 ${ele}`);
-                gnbli +=`<li>${ele["category"]}</li>`
+                gnbli +=`<li>${ele["category"]}`
+                    gnbli +=`<ul>`
+                        ele["subcategories"].forEach(function(ele2, idx2) {
+                            gnbli +=`<li>${ele2["name"]}`
+                                gnbli +=`<ul>`
+                                    ele2["items"].forEach(function(ele3, idx2) {
+                                        gnbli +=`<li>${ele3}</li>`
+                                    })                                    
+                                gnbli +=`</ul>`
+                            gnbli +=`</li>`
+                        })
+                    gnbli +=`</ul>`
+                gnbli +=`</li>`
             });
             $(".gnb").html(gnbli)
         },
