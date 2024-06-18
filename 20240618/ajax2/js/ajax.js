@@ -7,7 +7,7 @@ $(document).ready(function() {
             console.log(data, typeof data);
             let gnbli = "";
             data["menu"].forEach(function(ele, idx) {
-                gnbli +=`<li>${ele["catecory"]}</li>`
+                gnbli +=`<li>${ele["category"]}</li>`
             });
             $(".gnb").html(gnbli);
         },
